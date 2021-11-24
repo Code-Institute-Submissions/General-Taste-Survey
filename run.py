@@ -16,6 +16,13 @@ music = SHEET.worksheet('music')
 data = music.get_all_values()
 
 
+def get_category_data():
+    i = 1
+    while i < 6:
+        print(music.col_values(i))
+        i += 1
+
+
 def get_input_data():
     '''
     Get input data from user
@@ -25,7 +32,8 @@ def get_input_data():
     print('This survey contains answers from 150 people')
     print('The categories are: Music, Movies and Sports\n')
     data_str = input('Please enter a category here: ')
-    print(f'You have selected: {data_str}')
+    if data_str == 'Music' or 'music':
+        get_category_data()
 
 
 get_input_data()
