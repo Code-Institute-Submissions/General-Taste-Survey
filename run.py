@@ -26,9 +26,12 @@ def get_music_data():
     '''
     Get values from music sheet
     '''
+    print('Out of 150 people, when asked about their favourite kind of music')
     i = 1
-    while i < 6:
-        print(music.col_values(i))
+    while i <= 6:
+        music_name = music.cell(1, i).value
+        music_value = music.cell(2, i).value
+        print(f'{music_value} said: {music_name}')
         i += 1
 
 
@@ -36,9 +39,12 @@ def get_movies_data():
     '''
     Get values from movies sheet
     '''
+    print('Out of 150 people, when asked about their favourite kind of movies')
     i = 1
-    while i < 6:
-        print(movies.col_values(i))
+    while i <= 6:
+        movies_name = movies.cell(1, i).value
+        movies_value = movies.cell(2, i).value
+        print(f'{movies_value} said: {movies_name}')
         i += 1
 
 
@@ -46,9 +52,12 @@ def get_sports_data():
     '''
     Get values from sports sheet
     '''
+    print('Out of 150 people, when asked about their favourite kind of sports')
     i = 1
-    while i < 6:
-        print(sports.col_values(i))
+    while i <= 6:
+        sports_name = sports.cell(1, i).value
+        sports_value = sports.cell(2, i).value
+        print(f'{sports_value} said: {sports_name}')
         i += 1
 
 
