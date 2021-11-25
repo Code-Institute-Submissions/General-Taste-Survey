@@ -33,6 +33,7 @@ def get_music_data():
         music_value = music.cell(2, i).value
         print(f'{music_value} said: {music_name}')
         i += 1
+    print('')
 
 
 def get_movies_data():
@@ -46,6 +47,7 @@ def get_movies_data():
         movies_value = movies.cell(2, i).value
         print(f'{movies_value} said: {movies_name}')
         i += 1
+    print('')
 
 
 def get_sports_data():
@@ -59,6 +61,7 @@ def get_sports_data():
         sports_value = sports.cell(2, i).value
         print(f'{sports_value} said: {sports_name}')
         i += 1
+    print('')
 
 
 def get_input_data():
@@ -72,18 +75,28 @@ def get_input_data():
         print('The categories are: Music, Movies and Sports')
         data_str = input('Please enter a category: ')
         print('')
+
         if data_str == 'Music' or data_str == 'music':
             print(f'You have selected: {data_str.upper()}\n')
             get_music_data()
-            break
+            restart = input('Press ENTER key to choose another category\n')
+            if restart:
+                get_input_data()
+
         elif data_str == 'Movies' or data_str == 'movies':
             print(f'You have selected: {data_str.upper()}\n')
             get_movies_data()
-            break
+            restart = input('Press ENTER key to choose another category\n')
+            if restart:
+                get_input_data()
+
         elif data_str == 'Sports' or data_str == 'sports':
             print(f'You have selected: {data_str.upper()}\n')
             get_sports_data()
-            break
+            restart = input('Press ENTER key to choose another category\n')
+            if restart:
+                get_input_data()
+
         else:
             print('Invalid input, please try again\n')
 
