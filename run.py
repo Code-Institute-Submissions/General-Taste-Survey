@@ -58,19 +58,25 @@ def get_input_data():
     '''
     print('Welcome to the General Taste Survey!')
     print('------------------------------------\n')
-    print('The categories are: Music, Movies and Sports\n')
-    data_str = input('Please enter a category: ')
-    if data_str == 'Music' or data_str == 'music':
-        print(f'You have selected: {data_str.upper()}\n')
-        get_music_data()
-    elif data_str == 'Movies' or data_str == 'movies':
-        print(f'You have selected: {data_str.upper()}\n')
-        get_movies_data()
-    elif data_str == 'Sports' or data_str == 'sports':
-        print(f'You have selected: {data_str.upper()}\n')
-        get_sports_data()
-    else:
-        print('Invalid input, please try again')
+
+    while True:
+        print('The categories are: Music, Movies and Sports')
+        data_str = input('Please enter a category: ')
+        print('')
+        if data_str == 'Music' or data_str == 'music':
+            print(f'You have selected: {data_str.upper()}\n')
+            get_music_data()
+            break
+        elif data_str == 'Movies' or data_str == 'movies':
+            print(f'You have selected: {data_str.upper()}\n')
+            get_movies_data()
+            break
+        elif data_str == 'Sports' or data_str == 'sports':
+            print(f'You have selected: {data_str.upper()}\n')
+            get_sports_data()
+            break
+        else:
+            print('Invalid input, please try again\n')
 
 
 get_input_data()
