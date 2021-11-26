@@ -73,7 +73,7 @@ def get_input_data():
 
     while True:
         print('The categories are: Music, Movies and Sports')
-        data_str = input('Please enter a category: ')
+        data_str = input('Please enter a category:\n')
         print('')
 
         if data_str == 'Music' or data_str == 'music':
