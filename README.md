@@ -1,31 +1,43 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# General Taste Survey
 
-Welcome Jonathanrange,
+General Taste Survey is a survey about peoples taste in music, movies and sports, based in the Python terminal.
+For each category, 150 people have been asked about their favorite genre with 6 different options to choose from.
+Users can choose a specific category and reveal the survey results.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![Starting menu](media/responsive.png)
 
-## Reminders
+## **Features**
+  - The survey only has two general features.
+  - The first one is a simple menu where the user can choose a category by entering the correct name into the terminal. The survey results will then be displayed.
+  - The second feature is a simple option to restart the survey, by pressing the 'enter' key after the results of a category have been displayed.
+  ![Survey Restart](media/restart.png)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+  - An incorrect input (any other input than the exact category name) will trigger a warning.
+  ![Incorrect input](media/invalid.png)
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### Testing
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- I have confirmed that the survey is fully functional. The category results will only be displayed through a correct input value, and restart feature works as intended.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+- I have passed the code through a PEP8 Python Validator and confirmed there are no problems.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Unfixed Bugs
+No unfixed bugs
 
-Connect your GitHub repository and deploy as normal.
+## Deployment
 
-## Constraints
+- This project was deployed using Code Institue's mock terminal for Heroku. The steps to deploy are as follows:
+    - Fork or clone your repository
+    - Create a new Heroku app
+    - Set the buildbacks to Python and NodeJs in that order
+    - Link the Heroku app to the repository
+    - Click on Deploy
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+The live link can be found [here:](https://general-taste-survey.herokuapp.com/)
 
------
-Happy coding!
+## Credits
+
+### Content
+- The code to connect APIs, as well as the basic structure the 'get_data' functions was taken from Code Institute's 'Love Sandwiches' Project
+- The code for to target a specific cell in the Google Sheet was taken from [Bytes](https://bytes.com/topic/python/answers/926844-get-cell-value-google-spreadsheets)
